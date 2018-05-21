@@ -1,0 +1,27 @@
+<!--
+  Generated template for the TestePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista de Paises</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label stacked>Paises</ion-label>
+
+  <ion-list inset>
+    <ion-item *ngFor="let pais of paisesRest" (click)="goToPage(pais)" no-padding>
+      <h2>{{pais.translations.br}}</h2>
+    </ion-item>
+  </ion-list>
+  <br><br>
+  <button ion-button item-end (click) = "voltar()">Voltar</button>
+
+</ion-content>
